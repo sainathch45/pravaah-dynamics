@@ -5,7 +5,7 @@
 > **Pravaah OS:** v1.0.0  
 > **Last Updated:** 2026-08-08  
 > **Owner:** Technology Lead  
-> **Related Documents:** [Standards](standards.md), [Product 001 Technology](../website/technology.md), [ADRs](../decisions/README.md)  
+> **Related Documents:** [Standards](standards.md), [Product 001 Technology](../website/technology.md), [Product 001 Technical Architecture](../website/technical-architecture/README.md), [ADRs](../decisions/README.md)
 > **Estimated Reading Time:** 4 minutes
 
 ## Default posture

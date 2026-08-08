@@ -5,12 +5,14 @@
 > **Pravaah OS:** v1.0.0  
 > **Last Updated:** 2026-08-08  
 > **Owner:** Founders  
-> **Related Documents:** [Information Architecture](information-architecture.md), [Technology](technology.md), [Implementation Roadmap](implementation-roadmap.md)  
+> **Related Documents:** [Information Architecture](information-architecture.md), [Technology](technology.md), [Technical Architecture](technical-architecture/README.md), [Implementation Roadmap](implementation-roadmap.md)
 > **Estimated Reading Time:** 5 minutes
 
 Product 001 is the public expression of Pravaah. It is not an agency-template site. It should feel like reading a well-designed book or visiting a thoughtful architecture studio: calm, precise, and easy to trust.
 
 The complete no-code design definition lives in the [Product 001 Design Specification](design/README.md). That specification supersedes the initial high-level information architecture where it adds detail.
+
+The complete implementation architecture lives in the [Product 001 Technical Architecture](technical-architecture/README.md). That section supersedes the high-level technology recommendation where it adds build-level detail.
 
 ## Product goal
 

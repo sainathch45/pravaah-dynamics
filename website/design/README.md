@@ -5,7 +5,7 @@
 > **Pravaah OS:** v1.0.0  
 > **Last Updated:** 2026-08-08  
 > **Owner:** Founders  
-> **Related Documents:** [Product 001](../README.md), [Design System](../../design/design-system.md), [Implementation Roadmap](../implementation-roadmap.md)  
+> **Related Documents:** [Product 001](../README.md), [Design System](../../design/design-system.md), [Technical Architecture](../technical-architecture/README.md), [Implementation Roadmap](../implementation-roadmap.md)
 > **Estimated Reading Time:** 12 minutes
 
 This is the single design source of truth for Product 001. It specifies the public website as a usable editorial experience, not a collection of isolated pages. Where visual impact conflicts with usability, choose usability. Where a trend conflicts with longevity, choose longevity. Where cleverness conflicts with clarity, choose clarity.

@@ -5,7 +5,7 @@
 > **Pravaah OS:** v1.0.0  
 > **Last Updated:** 2026-08-08  
 > **Owner:** Technology Lead  
-> **Related Documents:** [Engineering Architecture](../engineering/architecture.md), [Implementation Roadmap](implementation-roadmap.md), [ADR-003](../decisions/ADR-003-product-001-stack.md)  
+> **Related Documents:** [Engineering Architecture](../engineering/architecture.md), [Technical Architecture](technical-architecture/README.md), [Implementation Roadmap](implementation-roadmap.md), [ADR-003](../decisions/ADR-003-product-001-stack.md)
 > **Estimated Reading Time:** 5 minutes
 
 ## Recommended stack

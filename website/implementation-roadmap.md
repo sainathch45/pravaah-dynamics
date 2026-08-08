@@ -5,7 +5,7 @@
 > **Pravaah OS:** v1.0.0  
 > **Last Updated:** 2026-08-08  
 > **Owner:** Technology Lead  
-> **Related Documents:** [Product 001](README.md), [Technology](technology.md), [Acceptance Criteria](acceptance.md)  
+> **Related Documents:** [Product 001](README.md), [Technology](technology.md), [Technical Architecture](technical-architecture/README.md), [Acceptance Criteria](acceptance.md)
 > **Estimated Reading Time:** 4 minutes
 
 ## Approval gate
