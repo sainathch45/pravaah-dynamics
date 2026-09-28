@@ -27,9 +27,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
             className="inline-flex items-center gap-3 text-base font-semibold tracking-[0.02em] text-[color:var(--color-ink-950)] no-underline"
             aria-label="Pravaah home"
           >
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-[10px] bg-[color:var(--color-ink-950)]">
-              <Mark className="h-5 w-5 text-[color:var(--color-paper-50)]" />
-            </span>
+            <Mark className="h-7 w-auto text-[color:var(--color-ink-950)]" />
             <span className="font-[family:var(--font-display)] text-lg">Pravaah</span>
           </Link>
           <nav aria-label="Primary" className="flex items-center gap-5">
@@ -56,9 +54,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
           <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-3">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-[10px] bg-[color:var(--color-ink-950)]">
-                  <Mark className="h-5 w-5 text-[color:var(--color-paper-50)]" />
-                </span>
+                <Mark className="h-7 w-auto text-[color:var(--color-ink-950)]" />
                 <span className="font-[family:var(--font-display)] text-lg text-[color:var(--color-ink-950)]">Pravaah</span>
               </div>
               <p className="max-w-sm text-sm leading-6 text-[color:var(--color-ink-700)]">
