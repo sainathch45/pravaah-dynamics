@@ -27,3 +27,39 @@ body {
   background: var(--color-moss-100);
   color: var(--color-ink-950);
 }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1), transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.draw-in {
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  animation: draw-in 2400ms cubic-bezier(0.16, 1, 0.3, 1) 200ms forwards;
+}
+
+@keyframes draw-in {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .draw-in {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}

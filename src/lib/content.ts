@@ -31,6 +31,21 @@ export const homePrinciples = [
   },
 ] as const;
 
+export const homeAudiences = [
+  {
+    title: 'Your site was someone’s weekend project.',
+    body: 'It worked when you were smaller. Now it’s the first thing people judge you on, and it’s not saying what you’ve become.',
+  },
+  {
+    title: 'You have the tools, they just don’t talk to each other.',
+    body: 'Bookings in one place, payments in another, WhatsApp holding the rest together. It works, barely, and only because someone remembers how.',
+  },
+  {
+    title: 'You’re building something and need it done right.',
+    body: 'Not a template with your logo on it. Something built with the same care you put into the actual work.',
+  },
+] as const;
+
 export const homeEngagements = [
   {
     label: 'Foundations',

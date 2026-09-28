@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { ConversationBanner } from '@/components/site/conversation-banner';
+import { Mark } from '@/components/site/mark';
 import { PageSection } from '@/components/site/page-section';
 import { SectionHeading } from '@/components/site/section-heading';
 import { Card } from '@/components/ui/card';
@@ -58,6 +59,28 @@ export default function AboutPage() {
             living. The other makes sure what gets built actually gets used. That&apos;s the standard we hold every
             engagement to.
           </p>
+        </div>
+
+        <div className="mt-20 border-t border-[color:var(--color-ink-950)]/10 pt-16">
+          <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+            <div className="lg:col-span-5">
+              <Mark className="h-16 w-auto text-[color:var(--color-ink-950)]" title="The Pravaah mark" />
+              <p className="mt-6 font-[family:var(--font-display)] text-2xl text-[color:var(--color-ink-950)]">
+                Held together on purpose.
+              </p>
+            </div>
+            <div className="space-y-4 lg:col-span-7">
+              <p className="text-base leading-7 text-[color:var(--color-ink-700)]">
+                The mark isn&apos;t an icon we picked. It&apos;s the &ldquo;aa&rdquo; already sitting in the middle of
+                Pravaah, redrawn as two arches sharing one baseline. No initials, no pictogram &mdash; the identity
+                was already in the name.
+              </p>
+              <p className="text-base leading-7 text-[color:var(--color-ink-700)]">
+                Two forms, held by one continuous line. Nothing about it is accidental, which is the same standard we
+                hold the rest of the work to.
+              </p>
+            </div>
+          </div>
         </div>
       </PageSection>
       <ConversationBanner />
