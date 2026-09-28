@@ -5,7 +5,7 @@
 > **Pravaah OS:** v1.0.0
 > **Last Updated:** 2026-08-08
 > **Owner:** Technology Lead
-> **Related Documents:** [Product 001 Analytics](../analytics.md), [Logging and Monitoring](22-logging-and-monitoring.md), [Privacy and Cookies](../privacy-and-cookies.md)
+> **Related Documents:** [Product 001 Analytics](../analytics.md), [Logging and Monitoring](22-logging-and-monitoring.md), [Privacy and Cookies](../privacy-and-cookies.md), [ADR-009](../../decisions/ADR-009-product-001-analytics-provider.md)
 > **Estimated Reading Time:** 7 minutes
 
 ## Analytics posture
@@ -15,6 +15,10 @@ Track only events that help understand whether Product 001 is working: page view
 ## Privacy
 
 Prefer aggregated, non-invasive measurement and minimise identifiers. Consent requirements should follow the actual intended markets and the selected tooling.
+
+## Launch provider
+
+Use no third-party analytics provider at launch. The site may still capture internal, privacy-conscious operational events required for the inquiry flow and logging, but it should not ship marketing analytics scripts until a future ADR approves one.
 
 ## Observability
 

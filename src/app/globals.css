@@ -1,0 +1,29 @@
+@import '../styles/tokens.css';
+@import 'tailwindcss';
+
+:root {
+  color-scheme: light;
+  background: var(--color-paper-50);
+  color: var(--color-ink-950);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-paper-50);
+  color: var(--color-ink-950);
+  font-family: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--color-moss-100);
+  color: var(--color-ink-950);
+}

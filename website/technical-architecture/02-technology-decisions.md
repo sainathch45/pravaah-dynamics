@@ -94,4 +94,4 @@
 
 ## Deferred choices
 
-Analytics vendor, error monitoring vendor, inquiry vendor, and content management system remain undecided until the operational and privacy facts are finalised. No dependency should be added purely because it is convenient during early implementation.
+Error monitoring vendor and content management system remain deferred until operational needs justify them. No dependency should be added purely because it is convenient during early implementation.

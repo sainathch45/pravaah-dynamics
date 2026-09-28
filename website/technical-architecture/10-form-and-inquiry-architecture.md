@@ -5,7 +5,7 @@
 > **Pravaah OS:** v1.0.0
 > **Last Updated:** 2026-08-08
 > **Owner:** Technology Lead
-> **Related Documents:** [Product 001](../README.md), [Privacy and Cookies](../privacy-and-cookies.md), [Analytics](../analytics.md)
+> **Related Documents:** [Product 001](../README.md), [Privacy and Cookies](../privacy-and-cookies.md), [Analytics](../analytics.md), [ADR-008](../../decisions/ADR-008-product-001-inquiry-delivery.md)
 > **Estimated Reading Time:** 8 minutes
 
 ## Inquiry model
@@ -25,7 +25,7 @@ Use layered, low-friction protections such as honeypot fields, rate limiting, an
 
 ## Delivery
 
-The submission path must not silently lose inquiries. If a third-party delivery service is used, the architecture should support retries, clear failure states, and a durable record of the submitted payload status.
+The submission path must not silently lose inquiries. For launch, use a direct email delivery path backed by Resend and a server-side submission handler. The architecture should support retries, clear failure states, and a durable record of the submitted payload status.
 
 ## Success and failure states
 

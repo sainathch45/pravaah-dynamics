@@ -21,3 +21,5 @@ Each ADR includes: context, decision, alternatives considered, reasoning, conseq
 - [ADR-005: Truth-first public launch](ADR-005-truth-first-launch.md)
 - [ADR-006: Product 001 chapter experience](ADR-006-product-001-design-experience.md)
 - [ADR-007: Public brand and visual identity direction](ADR-007-public-brand-and-identity.md)
+- [ADR-008: Product 001 inquiry delivery vendor](ADR-008-product-001-inquiry-delivery.md)
+- [ADR-009: Product 001 analytics provider](ADR-009-product-001-analytics-provider.md)
