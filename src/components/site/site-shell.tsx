@@ -24,11 +24,13 @@ export function SiteShell({ children }: { children: ReactNode }) {
         <div className="mx-auto flex max-w-[1280px] items-center justify-between px-5 py-4 md:px-8 lg:px-12">
           <Link
             href="/"
-            className="inline-flex items-center gap-2.5 text-sm font-semibold tracking-[0.08em] text-[color:var(--color-ink-950)] no-underline"
+            className="inline-flex items-center gap-3 text-base font-semibold tracking-[0.02em] text-[color:var(--color-ink-950)] no-underline"
             aria-label="Pravaah home"
           >
-            <Mark className="h-6 w-6" />
-            Pravaah
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-[10px] bg-[color:var(--color-ink-950)]">
+              <Mark className="h-5 w-5 text-[color:var(--color-paper-50)]" />
+            </span>
+            <span className="font-[family:var(--font-display)] text-lg">Pravaah</span>
           </Link>
           <nav aria-label="Primary" className="flex items-center gap-5">
             <div className="hidden items-center gap-5 md:flex">
@@ -49,22 +51,40 @@ export function SiteShell({ children }: { children: ReactNode }) {
         </div>
       </header>
       <main id="main-content">{children}</main>
-      <footer className="border-t border-[color:var(--color-ink-950)]/10">
-        <div className="mx-auto grid max-w-[1280px] gap-8 px-5 py-16 md:grid-cols-3 md:px-8 lg:px-12">
-          <p className="max-w-md text-sm leading-6 text-[color:var(--color-ink-700)]">
-            A small studio for growing businesses, built by an AI engineer and a customer-success specialist.
-          </p>
-          <nav aria-label="Footer explore" className="flex flex-col gap-2 text-sm">
-            <span className="text-xs font-semibold uppercase tracking-[0.08em] text-[color:var(--color-ink-700)]">Explore</span>
-            {navigation.map((item) => (
-              <TextLink key={item.href} href={item.href} className="w-fit text-[color:var(--color-ink-950)] no-underline">
-                {item.label}
-              </TextLink>
-            ))}
-          </nav>
-          <div className="text-sm text-[color:var(--color-ink-700)]">
-            <p className="text-xs font-semibold uppercase tracking-[0.08em]">Based in</p>
-            <p className="mt-2">Hyderabad, Telangana, India</p>
+      <footer className="border-t border-[color:var(--color-ink-950)]/10 bg-[color:var(--color-paper-100)]">
+        <div className="mx-auto max-w-[1280px] px-5 py-16 md:px-8 lg:px-12">
+          <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+            <div className="space-y-4">
+              <div className="inline-flex items-center gap-3">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-[10px] bg-[color:var(--color-ink-950)]">
+                  <Mark className="h-5 w-5 text-[color:var(--color-paper-50)]" />
+                </span>
+                <span className="font-[family:var(--font-display)] text-lg text-[color:var(--color-ink-950)]">Pravaah</span>
+              </div>
+              <p className="max-w-sm text-sm leading-6 text-[color:var(--color-ink-700)]">
+                A small studio for growing businesses, built by an AI engineer and a customer-success specialist.
+              </p>
+            </div>
+            <nav aria-label="Footer explore" className="flex flex-col gap-3 text-sm">
+              <span className="text-xs font-semibold uppercase tracking-[0.08em] text-[color:var(--color-ink-700)]">Explore</span>
+              {navigation.map((item) => (
+                <TextLink key={item.href} href={item.href} className="w-fit text-[color:var(--color-ink-950)] no-underline">
+                  {item.label}
+                </TextLink>
+              ))}
+            </nav>
+            <div className="text-sm">
+              <span className="text-xs font-semibold uppercase tracking-[0.08em] text-[color:var(--color-ink-700)]">Based in</span>
+              <p className="mt-3 text-[color:var(--color-ink-950)]">Hyderabad, Telangana, India</p>
+              <p className="mt-4">
+                <TextLink href="/conversation" className="text-[color:var(--color-moss-700)] no-underline">
+                  Start a conversation →
+                </TextLink>
+              </p>
+            </div>
+          </div>
+          <div className="mt-12 flex flex-col gap-2 border-t border-[color:var(--color-ink-950)]/10 pt-6 text-xs text-[color:var(--color-ink-700)] sm:flex-row sm:items-center sm:justify-between">
+            <p>© {new Date().getFullYear()} Pravaah Dynamics. All rights reserved.</p>
           </div>
         </div>
       </footer>

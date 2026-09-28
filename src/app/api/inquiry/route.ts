@@ -3,6 +3,24 @@ import { validateInquiryPayload } from '@/lib/inquiry';
 
 const RESEND_API_URL = 'https://api.resend.com/emails';
 
+const RATE_LIMIT_WINDOW_MS = 60_000;
+const RATE_LIMIT_MAX_REQUESTS = 5;
+const submissionsByIp = new Map<string, number[]>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const timestamps = (submissionsByIp.get(ip) ?? []).filter((ts) => now - ts < RATE_LIMIT_WINDOW_MS);
+
+  if (timestamps.length >= RATE_LIMIT_MAX_REQUESTS) {
+    submissionsByIp.set(ip, timestamps);
+    return true;
+  }
+
+  timestamps.push(now);
+  submissionsByIp.set(ip, timestamps);
+  return false;
+}
+
 function htmlEmailBody(input: { name: string; email: string; company: string; area: string; message: string }) {
   return `
     <h1>New Pravaah inquiry</h1>
@@ -16,6 +34,12 @@ function htmlEmailBody(input: { name: string; email: string; company: string; ar
 }
 
 export async function POST(request: Request) {
+  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? request.headers.get('x-real-ip') ?? 'unknown';
+
+  if (isRateLimited(ip)) {
+    return NextResponse.json({ ok: false, error: 'Too many requests. Please try again in a minute.' }, { status: 429 });
+  }
+
   const formData = await request.formData();
 
   const honeypot = String(formData.get('companyWebsite') ?? '');

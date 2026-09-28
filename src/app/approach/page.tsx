@@ -1,6 +1,7 @@
 import { ConversationBanner } from '@/components/site/conversation-banner';
 import { PageSection } from '@/components/site/page-section';
 import { SectionHeading } from '@/components/site/section-heading';
+import { Card } from '@/components/ui/card';
 
 const steps = [
   {
@@ -26,20 +27,18 @@ export default function ApproachPage() {
     <>
       <PageSection className="mx-auto max-w-[1280px] px-5 py-20 md:px-8 lg:px-12">
         <SectionHeading eyebrow="Approach" as="h1" title="Good work begins with a better question." lead="Pravaah works with businesses to understand the situation before deciding what to make." />
-        <div className="mt-12 space-y-6">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2">
           {steps.map((step, index) => (
-            <article key={step.title} className="grid gap-4 border-t border-[color:var(--color-ink-950)]/10 pt-5 lg:grid-cols-12">
-              <div className="lg:col-span-3">
-                <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[color:var(--color-ink-700)]">0{index + 1}</p>
-                <h2 className="mt-2 text-2xl font-semibold text-[color:var(--color-ink-950)]">{step.title}</h2>
-              </div>
-              <div className="lg:col-span-9">
-                <p className="text-base leading-8 text-[color:var(--color-ink-700)]">{step.body}</p>
-              </div>
-            </article>
+            <Card key={step.title}>
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[color:var(--color-moss-100)] text-xs font-semibold text-[color:var(--color-moss-700)]">
+                0{index + 1}
+              </span>
+              <h2 className="mt-4 text-2xl font-semibold text-[color:var(--color-ink-950)]">{step.title}</h2>
+              <p className="mt-2 text-base leading-7 text-[color:var(--color-ink-700)]">{step.body}</p>
+            </Card>
           ))}
         </div>
-        <div className="mt-16 max-w-3xl border-t border-[color:var(--color-ink-950)]/10 pt-8">
+        <div className="mt-12 max-w-3xl rounded-[var(--radius-card)] bg-[color:var(--color-paper-100)] p-8">
           <h2 className="text-3xl font-[family:var(--font-display)] leading-tight text-[color:var(--color-ink-950)]">Clarity is part of the work.</h2>
           <p className="mt-4 text-lg leading-8 text-[color:var(--color-ink-700)]">
             We explain why we recommend a direction, what alternatives we considered, and what each choice means for the business. A good decision should remain understandable after the meeting ends.

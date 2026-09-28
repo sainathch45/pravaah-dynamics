@@ -17,19 +17,19 @@ export function validateInquiryPayload(input: Record<string, unknown>): { valid:
   const message = String(input.message ?? '').trim();
   const area = String(input.area ?? '').trim().toLowerCase();
 
-  if (!name) {
+  if (!name || name.length > 120) {
     return { valid: false, error: 'Enter your name so we know what to call you.' };
   }
 
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (!email || email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return { valid: false, error: 'Enter a valid work email so we can reply.' };
   }
 
-  if (!company) {
+  if (!company || company.length > 160) {
     return { valid: false, error: 'Enter your company or organisation.' };
   }
 
-  if (!message) {
+  if (!message || message.length > 4000) {
     return { valid: false, error: 'Tell us a little about what you are working through.' };
   }
 

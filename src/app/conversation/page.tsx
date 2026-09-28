@@ -22,7 +22,7 @@ export default function ConversationPage() {
           </div>
         </aside>
         <div className="lg:col-span-8">
-          <div className="rounded-[var(--radius-control)] border border-[color:var(--color-ink-950)]/10 bg-[color:var(--color-paper-50)] p-6 shadow-[var(--shadow-dialog)] md:p-8">
+          <div className="rounded-[var(--radius-card)] border border-[color:var(--color-ink-950)]/8 bg-[color:var(--color-paper-50)] p-6 shadow-[var(--shadow-card)] md:p-8">
             <ConversationForm />
           </div>
         </div>
